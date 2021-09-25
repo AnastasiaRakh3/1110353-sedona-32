@@ -1,6 +1,6 @@
 # Личный проект «Седона»
 
-* Студент: [Anastasiia Rakhmatova](https://up.htmlacademy.ru/htmlcss/32/user/1110353).
+* Студент: [Anastasiia Rakhmatova](https://htmlacademy.ru/profile/id1110353).
 * Наставник: [Микаел Магтесян](https://htmlacademy.ru/profile/id1100875).
 
 ---
