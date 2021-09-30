@@ -18,7 +18,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Гостиницы</a>
+              <a class="navigation-link navigation-link-active" href="#">Гостиницы</a>
             </li>
           </ul>
           <a class="page-header-logo" href="index.html">
@@ -43,8 +43,8 @@
         </nav>
       </header>
 
-      <main class="main-stays">
-        <div class="upper-wrapper">
+      <main class="main-hotels">
+        <header class="main-header">
           <h1>Гостиницы Седоны</h1>
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
@@ -59,82 +59,88 @@
             </li>
           </ul>
           <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="filter-item facilities">
-              <legend>Инфраструктура:</legend>
-              <label class="facilities-label">
-                <input class="visually-hidden" type="checkbox" name="facilities" value="swimming-pool" checked>
-                Бассейн
-              </label>
-              <label class="facilities-label">
-                <input class="visually-hidden" type="checkbox" name="facilities" value="parking" checked>
-                Парковка
-              </label>
-              <label class="facilities-label">
-                <input class="visually-hidden" type="checkbox" name="facilities" value="wi-fi">
-                Wi-Fi
-              </label>
-            </fieldset>
-            <fieldset class="filter-item housing-type">
-              <legend>Тип жилья:</legend>
-              <label class="housing-type-label">
-                <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
-                Гостиница
-              </label>
-              <label class="housing-type-label">
-                <input class="visually-hidden" type="radio" name="housing-type" value="motel" checked>
-                Мотель
-              </label>
-              <label class="housing-type-label">
-                <input class="visually-hidden" type="radio" name="housing-type" value="apartament">
-                Апартаменты
-              </label>
-            </fieldset>
-            <fieldset class="filter-item price">
-              <legend>Стоимость, ₽:</legend>
-              <div class="price-fields">
-                <label class="price-fields-min">
-                  <input type="number" name="min-price" value="0">
-                  <span>от</span>
+            <section class="filter-hotels">
+              <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
+              <fieldset class="filter-item facilities">
+                <legend>Инфраструктура:</legend>
+                <label class="facilities-label">
+                  <input class="visually-hidden" type="checkbox" name="facilities" value="swimming-pool" checked>
+                  Бассейн
                 </label>
-                <label class="price-fields-max">
-                  <input type="number" name="max-price" value="9000">
-                  <span>до</span>
+                <label class="facilities-label">
+                  <input class="visually-hidden" type="checkbox" name="facilities" value="parking" checked>
+                  Парковка
                 </label>
-              </div>
-              <div class="price-range">
-                <div class="price-scale">
-                  <div class="price-bar"></div>
+                <label class="facilities-label">
+                  <input class="visually-hidden" type="checkbox" name="facilities" value="wi-fi">
+                  Wi-Fi
+                </label>
+              </fieldset>
+              <fieldset class="filter-item housing-type">
+                <legend>Тип жилья:</legend>
+                <label class="housing-type-label">
+                  <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
+                  Гостиница
+                </label>
+                <label class="housing-type-label">
+                  <input class="visually-hidden" type="radio" name="housing-type" value="motel">
+                  Мотель
+                </label>
+                <label class="housing-type-label">
+                  <input class="visually-hidden" type="radio" name="housing-type" value="apartament">
+                  Апартаменты
+                </label>
+              </fieldset>
+              <fieldset class="filter-item price">
+                <legend>Стоимость, ₽:</legend>
+                <div class="price-fields">
+                  <label class="price-fields-min">
+                    <input type="number" name="min-price" value="0">
+                    <span>от</span>
+                  </label>
+                  <label class="price-fields-max">
+                    <input type="number" name="max-price" value="9000">
+                    <span>до</span>
+                  </label>
                 </div>
-                <button class="price-range-toggle toggle-min" type="button">
-                  <span class="visually-hidden">Изменить минимальную цену</span>
-                </button>
-                <button class="price-range-toggle toggle-max" type="button">
-                  <span class="visually-hidden">Изменить максимальную цену</span>
-                </button>
-              </div>
-            </fieldset>
-            <button class="btn-general btn-form" type="submit">Применить</button>
-            <input type="reset" value="Сбросить">
+                <div class="price-range">
+                  <div class="price-scale">
+                    <div class="price-bar"></div>
+                  </div>
+                  <button class="price-range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="price-range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </fieldset>
+              <button class="btn-general btn-form" type="submit">Применить</button>
+              <button type="reset">Сбросить</button>
+            </section>
           </form>
-        </div>
-        <div class="hotels">
-          <div class="hotels-top">
-            <p class="hotels-title">Найдено гостиниц: 38</p>
+        </header>
+        <section class="hotels">
+          <header class="hotels-header">
+            <p class="hotels-search-results">Найдено гостиниц: 38</p>
             <select class="hotels-sorting" name="hotels-sorting">
               <option value="cheap">Сначала дешевые</option>
             </select>
             <div class="view">
-              <button class="view-item">
-                <span class="visually-hidden">Отобрразить плиткой</span>
-              </button>
-              <button class="view-item">
-                <span class="visually-hidden">Отобрразить слайдом</span>
-              </button>
-              <button class="view-item view-item-active">
-                <span class="visually-hidden">Отобрразить списком</span>
-              </button>
+              <label class="view-label" for="view-tile">
+                <span class="visually-hidden">Отобразить плиткой</span>
+              </label>
+              <input class="visually-hidden" type="checkbox" name="hotel-view" id="view-tile">
+              <label class="view-label" for="view-slide">
+                <span class="visually-hidden">Отобразить слайдом</span>
+              </label>
+              <input class="visually-hidden" type="checkbox" name="hotel-view" id="view-slide">
+              <label class="view-label" for="view-row">
+                <span class="visually-hidden">Отобразить списком</span>
+              </label>
+              <input class="visually-hidden" type="checkbox" name="hotel-view" id="view-row" checked>
             </div>
-          </div>
+          </header>
           <ul class="hotels-list">
             <li class="hotels-item">
               <img class="hotels-photo" src="" alt="Отель Amara Resort & Spa">
@@ -213,8 +219,9 @@
           <div class="btn-more-wrapper">
             <button class="btn-more">Загрузить еще</button>
           </div>
-          <div class="hotels-bottom">
-            <ul class="pagination">
+          <div class="pagination">
+            <h2 class="visually-hidden">Пагинация</h2>
+            <ul class="pagination-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-disabled" href="#">1</a>
               </li>
@@ -241,7 +248,7 @@
               </select>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <footer class="page-footer">
