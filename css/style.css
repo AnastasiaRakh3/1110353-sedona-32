@@ -1,0 +1,136 @@
+/* header */
+
+.navigation-user-item:first-child .navigation-user-link {
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+}
+
+.navigation-user-item:nth-child(2) .navigation-user-link {
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+}
+
+/* main */
+
+.welcome {
+  min-height: 485px;
+
+  background-image: url("../img/background-welcome.jpg");
+  background-color: #808080;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.details-item:first-child h4::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+
+  background-image: url("../img/details-house.svg");
+  background-repeat: no-repeat;
+}
+
+.details-item:nth-child(2) h4::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 70px;
+
+  background-image: url("../img/details-burger.svg");
+  background-repeat: no-repeat;
+}
+
+.details-item:nth-child(3) h4::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 76px;
+
+  background-image: url("../img/details-souvenir.svg");
+  background-repeat: no-repeat;
+}
+
+/* footer */
+
+.subscription {
+  min-height: 411px;
+
+  background-image: url("../img/background-blur1.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.social-item:first-child .social-link {
+  background-image: url("../img/social-twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.social-item:nth-child(2) .social-link {
+  background-image: url("../img/social-facebook.svg");
+  background-repeat: no-repeat;
+}
+
+.social-item:nth-child(3) .social-link {
+  background-image: url("../img/social-youtube.svg");
+  background-repeat: no-repeat;
+}
+
+/* hotels.html */
+
+.main-header {
+  min-height: 480px;
+
+  background-image: url("../img/background-blur2.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-list::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/home.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 8px;
+
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.view-label:first-of-type {
+  background-image: url("../img/view-tile.svg");
+  background-repeat: no-repeat;
+}
+
+.view-label:nth-of-type(2) {
+  background-image: url("../img/view-slide.svg");
+  background-repeat: no-repeat;
+}
+
+.view-label:nth-of-type(3) {
+  background-image: url("../img/view-row.svg");
+  background-repeat: no-repeat;
+}
+
+.hotels-item:first-child .hotels-rating::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/home.svg");
+  background-repeat: no-repeat;
+}
+
+.page-footer-hotels .subscription {
+  background-image: none;
+}
