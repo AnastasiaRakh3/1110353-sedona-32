@@ -62,7 +62,7 @@
           </ul>
           <section class="filter-hotels">
             <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
-            <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
+            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter-item facilities">
                 <legend class="filter-legend">Инфраструктура:</legend>
                 <label class="facilities-label">
@@ -118,8 +118,10 @@
                   </button>
                 </div>
               </fieldset>
-              <button class="form-button form-button-submit" type="submit">Применить</button>
-              <button class="form-button form-button-reset" type="reset">Сбросить</button>
+              <div class="form-buttons">
+                <button class="form-button form-button-submit" type="submit">Применить</button>
+                <button class="form-button form-button-reset" type="reset">Сбросить</button>
+              </div>
             </form>
           </section>
         </header>
@@ -262,7 +264,7 @@
             Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="subscription-wrap">
+            <p class="subscription-field-wrap">
               <label class="visually-hidden" for="subscription-email">Электронная почта</label>
               <input class="subscription-field" type="email" id="subscription-email" name="subscription-email"
                 placeholder="Ваш e-mail" required>
