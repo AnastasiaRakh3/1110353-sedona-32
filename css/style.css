@@ -216,40 +216,27 @@ body {
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: repeat(4, 384px);
-  grid-template-areas:
-    "lifestyle lifestyle lifestyle"
-    "lifestyle lifestyle lifestyle"
-    "bridge bridge bridge"
-    "closeness way uncrowded";
 }
 
 .advantages-lifestyle {
-  grid-area: lifestyle;
   display: grid;
+  grid-column: 1/-1;
   grid-template-columns: repeat(3, 400px);
-  /* grid-template-rows: repeat(2, 384px); */
 }
 
 .advantages-bridge {
-  grid-area: bridge;
   display: grid;
+  grid-column: 1/-1;
   grid-template-columns: repeat(3, 400px);
 }
 
-.advantages-closeness {
-  grid-area: closeness;
+.advantages-closeness,
+.advantages-uncrowded {
   background-color: #f0f6fa;
 }
 
 .advantages-way {
-  grid-area: way;
   background-color: #e6f0f6;
-}
-
-.advantages-uncrowded {
-  grid-area: uncrowded;
-  background-color: #f0f6fa;
 }
 
 .advantages-card,
@@ -257,10 +244,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 384px;
+  box-sizing: border-box;
 }
 
 .advantages-card {
-  padding: 98px 0 77px;
+  padding: 98px 0 30px;
 }
 
 .advantages-lifestyle .advantages-card {
@@ -332,7 +321,7 @@ body {
 }
 
 .details-item {
-  padding: 184px 0 79px;
+  padding: 184px 0 30px;
   background-color: #f0f6fa;
 }
 
