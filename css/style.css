@@ -78,7 +78,7 @@ body {
 }
 
 .navigation-list {
-  width: 389px;
+  width: 419px;
   padding: 0 56px;
 }
 
@@ -130,33 +130,41 @@ body {
   background-position: center;
 }
 
-.navigation-user-favorites {
-  display: block;
-  width: 18px;
-  height: 17px;
-  padding: 24px 11px;
-  background-image: url("../img/icons/heart.svg");
-  background-repeat: no-repeat;
-  background-position: 11px 24px;
-}
-
 .navigation-user-link {
   text-decoration: none;
 }
 
+.navigation-user-favorites {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 37px;
+  background-image: url("../img/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .favorites-quantity {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
   font-size: 10px;
   line-height: 13px;
   color: #ffffff;
   background-color: #7db54f;
+  border-radius: 50%;
 }
 
 .btn-header {
   display: block;
-  min-width: 120px;
-  padding: 9px 20px 10px;
+  min-width: 160px;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 37px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
@@ -191,13 +199,13 @@ body {
 .advantages-header {
   width: 720px;
   margin: 0 auto;
-  padding-top: 63px;
+  padding-top: 60px;
   padding-bottom: 79px;
 }
 
 .advantages-title {
   width: 720px;
-  margin: 0 auto 23px;
+  margin: 0 auto 35px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -268,9 +276,9 @@ body {
 
 .advantages-item-title,
 .details-title {
-  width: 160px;
+  width: 175px;
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -279,7 +287,7 @@ body {
 
 .advantages-item-title {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
   text-align: center;
 }
 
@@ -293,7 +301,7 @@ body {
 
 .advantages-number {
   display: block;
-  margin-bottom: 26px;
+  margin-bottom: 31px;
 }
 
 .advantages-description {
@@ -321,6 +329,7 @@ body {
 }
 
 .details-item {
+  position: relative;
   padding: 184px 0 30px;
   background-color: #f0f6fa;
 }
@@ -329,34 +338,34 @@ body {
   background-color: transparent;
 }
 
-.details-item:first-child .details-title::before {
+.details-item::before {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+}
+
+.details-item:first-child::before {
+  top: 89px;
+  left: 163;
   width: 75px;
   height: 72px;
-
   background-image: url("../img/details-house.svg");
-  background-repeat: no-repeat;
 }
 
-.details-item:nth-child(2) .details-title::before {
-  content: "";
-  position: absolute;
+.details-item:nth-child(2)::before {
+  top: 91px;
+  left: 163;
   width: 74px;
   height: 70px;
-
   background-image: url("../img/details-burger.svg");
-  background-repeat: no-repeat;
 }
 
-.details-item:nth-child(3) .details-title::before {
-  content: "";
-  position: absolute;
+.details-item:nth-child(3)::before {
+  top: 85px;
+  left: 168;
   width: 64px;
   height: 76px;
-
   background-image: url("../img/details-souvenir.svg");
-  background-repeat: no-repeat;
 }
 
 .details-title {
@@ -375,13 +384,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 91px 0;
+  padding-top: 87px;
+  padding-bottom: 91px;
 }
 
 .search-title {
   width: 720px;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -393,16 +403,17 @@ body {
 .search-description {
   width: 720px;
   margin-top: 0;
-  margin-bottom: 73px;
+  margin-bottom: 58px;
+  margin-left: -15px;
+  text-indent: 15px;
   text-align: center;
 }
 
 .search-link {
   display: block;
   min-width: 575px;
-  padding: 13px 0 17px;
   font-size: 20px;
-  line-height: 36px;
+  line-height: 60px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
@@ -420,7 +431,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 94px 0 93px;
+  padding: 94px 0;
 
   background-image: url("../img/background-blur1.jpg");
   background-color: #102c09;
@@ -430,7 +441,7 @@ body {
 
 .subscription-title {
   width: 498px;
-  margin: 0 auto 15px;
+  margin: 0 auto 30px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -441,7 +452,7 @@ body {
 
 .subscription-description {
   width: 498px;
-  margin: 0 auto 26px;
+  margin: 0 auto 46px;
   text-align: center;
   color: #ffffff;
 }
@@ -459,6 +470,7 @@ body {
 .subscription-field {
   width: 100%;
   padding: 0 22px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 60px;
   color: rgba(0, 0, 0, 0.6);
@@ -470,6 +482,7 @@ body {
 
 .subscription-field::placeholder {
   color: #000000;
+  opacity: 0.6;
 }
 
 .subscription-button {
@@ -489,17 +502,17 @@ body {
 
 .contacts {
   display: flex;
-  padding: 0 72px 0 67px;
+  padding: 0 72px 0 55px;
 }
 
 .social {
   display: flex;
   width: 300px;
-  margin: 38px 50px 40px 0;
+  margin: 36px 50px 40px 0;
 }
 
 .social-link {
-  display: inline-block;
+  display: block;
   padding: 15px;
   background-position: center;
 }
