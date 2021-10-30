@@ -80,20 +80,53 @@ body {
 
 .navigation-list {
   width: 419px;
-  padding: 0 56px;
+  padding-left: 59px;
+  padding-right: 56px;
 }
 
 .navigation-item {
-  margin-right: 3px;
+  position: relative;
+  margin-right: 9px;
 }
 
 .navigation-link {
   display: block;
-  padding: 19px 15px 20px;
+  margin-top: 13px;
+  margin-bottom: 14px;
+  padding: 0 9px;
   font-size: 20px;
+  line-height: 32px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:focus {
+  color: #756257;
+  border: 3px solid #83b3d3;
+  outline: none;
+}
+
+.navigation-link:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
+.navigation-link-active::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  right: 10px;
+  bottom: -1px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .page-header-logo {
