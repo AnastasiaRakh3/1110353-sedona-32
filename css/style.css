@@ -130,6 +130,7 @@ body {
 }
 
 .page-header-logo {
+  /* position: relative; */
   z-index: 1;
   margin-bottom: -5px;
 }
@@ -159,39 +160,48 @@ body {
 
 .navigation-user-search,
 .navigation-user-favorites {
+  position: relative;
   display: block;
   width: 32px;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 3px solid transparent;
   border-radius: 10px;
 }
 
 .navigation-user-search {
   height: 32px;
-  background-image: url("../img/icons/search.svg");
 }
 
 .navigation-user-favorites {
-  position: relative;
   height: 31px;
-  background-image: url("../img/icons/heart.svg");
 }
 
-.navigation-user-search:hover,
-.navigation-user-favorites:hover {
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation-user-search:hover path,
+.navigation-user-favorites:hover path {
   fill: #756257;
 }
 
 .navigation-user-search:focus,
 .navigation-user-favorites:focus {
-  fill: #756257;
   border: 3px solid #83b3d3;
   outline: none;
 }
 
-.navigation-user-search:active,
-.navigation-user-favorites:active {
+.navigation-user-search:focus path,
+.navigation-user-favorites:focus path {
+  fill: #756257;
+}
+
+.navigation-user-search:active path,
+.navigation-user-favorites:active path {
   fill: rgba(117, 98, 87, 0.3);
 }
 
@@ -206,6 +216,7 @@ body {
   height: 19px;
   font-size: 10px;
   line-height: 13px;
+  letter-spacing: -0.1em;
   color: #ffffff;
   background-color: #7db54f;
   border-radius: 50%;
@@ -637,15 +648,18 @@ body {
 }
 
 .social-item {
-  margin-right: 4px;
+  margin-right: 3px;
+}
+
+.social-item:nth-child(2) {
+  margin-right: 5px;
 }
 
 .social-link {
+  position: relative;
   display: block;
   width: 34px;
   height: 34px;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 3px solid transparent;
   border-radius: 10px;
 }
@@ -655,16 +669,26 @@ body {
   outline: none;
 }
 
-.social-link-twitter {
-  background-image: url("../img/icons/social-twitter.svg");
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
-.social-link-facebook {
-  background-image: url("../img/icons/social-facebook.svg");
+.social-link:hover path {
+  fill: #68a2ca;
 }
 
-.social-link-youtube {
-  background-image: url("../img/icons/social-youtube.svg");
+.social-link:focus path {
+  fill: #68a2ca;
+}
+
+.social-link:active path {
+  fill: #68a2ca;
+  opacity: 0.3;
 }
 
 .footer-tel {
@@ -697,7 +721,10 @@ body {
 }
 
 .page-footer-logo {
+  position: relative;
   display: block;
+  min-width: 154px;
+  min-height: 64px;
   margin: 25px 0;
   border: 3px solid transparent;
   border-radius: 10px;
@@ -708,10 +735,28 @@ body {
   outline: none;
 }
 
-.platform-logo {
-  display: block;
-  padding: 16px 20px;
+.footer-icon-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
+
+.page-footer-logo:hover path {
+  fill: #756257;
+}
+
+.page-footer-logo:focus path {
+  fill: #756257;
+}
+
+.page-footer-logo:active path {
+  fill: #756257;
+  opacity: 0.3;
+}
+
 
 /* hotels.html */
 
