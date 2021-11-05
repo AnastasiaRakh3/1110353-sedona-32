@@ -130,7 +130,6 @@ body {
 }
 
 .page-header-logo {
-  /* position: relative; */
   z-index: 1;
   margin-bottom: -5px;
 }
@@ -182,10 +181,11 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #000;
 }
 
-.navigation-user-search:hover path,
-.navigation-user-favorites:hover path {
+.navigation-user-search:hover .navigation-icon,
+.navigation-user-favorites:hover .navigation-icon {
   fill: #756257;
 }
 
@@ -195,13 +195,13 @@ body {
   outline: none;
 }
 
-.navigation-user-search:focus path,
-.navigation-user-favorites:focus path {
+.navigation-user-search:focus .navigation-icon,
+.navigation-user-favorites:focus .navigation-icon {
   fill: #756257;
 }
 
-.navigation-user-search:active path,
-.navigation-user-favorites:active path {
+.navigation-user-search:active .navigation-icon,
+.navigation-user-favorites:active .navigation-icon {
   fill: rgba(117, 98, 87, 0.3);
 }
 
@@ -676,17 +676,18 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #83b3d3;
 }
 
-.social-link:hover path {
+.social-link:hover .social-icon {
   fill: #68a2ca;
 }
 
-.social-link:focus path {
+.social-link:focus .social-icon {
   fill: #68a2ca;
 }
 
-.social-link:active path {
+.social-link:active .social-icon {
   fill: #68a2ca;
   opacity: 0.3;
 }
@@ -742,21 +743,21 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #000;
 }
 
-.page-footer-logo:hover path {
+.page-footer-logo:hover .footer-icon-logo {
   fill: #756257;
 }
 
-.page-footer-logo:focus path {
+.page-footer-logo:focus .footer-icon-logo {
   fill: #756257;
 }
 
-.page-footer-logo:active path {
+.page-footer-logo:active .footer-icon-logo {
   fill: #756257;
   opacity: 0.3;
 }
-
 
 /* hotels.html */
 
@@ -764,7 +765,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* min-height: 348px; */
   padding-top: 32px;
   padding-bottom: 70px;
 
