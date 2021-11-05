@@ -116,6 +116,7 @@ body {
 .navigation-link:active {
   color: #756257;
   opacity: 0.3;
+  border: 3px solid transparent;
 }
 
 .navigation-link-active::after {
@@ -193,6 +194,11 @@ body {
 .navigation-user-favorites:focus {
   border: 3px solid #83b3d3;
   outline: none;
+}
+
+.navigation-user-search:active,
+.navigation-user-favorites:active {
+  border: 3px solid transparent;
 }
 
 .navigation-user-search:focus .navigation-icon,
@@ -669,6 +675,10 @@ body {
   outline: none;
 }
 
+.social-link:focus {
+  border: 3px solid transparent;
+}
+
 .social-icon {
   position: absolute;
   top: 0;
@@ -718,6 +728,7 @@ body {
 
 .footer-tel:active {
   color: #756257;
+  border: 3px solid transparent;
   opacity: 0.3;
 }
 
@@ -733,6 +744,11 @@ body {
 
 .page-footer-logo:focus {
   border: 3px solid #83b3d3;
+  outline: none;
+}
+
+.page-footer-logo:active {
+  border: 3px solid transparent;
   outline: none;
 }
 
