@@ -8,6 +8,7 @@
   </head>
 
   <body class="body-hotels">
+
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
@@ -81,9 +82,7 @@
             <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter-item facilities">
-
                 <legend class="filter-legend">Инфраструктура:</legend>
-
                 <input class="visually-hidden" id="swimming-pool" type="checkbox" name="facilities-swimming-pool"
                   value="swimming-pool" checked>
                 <label class="facilities-label" for="swimming-pool">Бассейн</label>
@@ -92,42 +91,36 @@
                 <label class="facilities-label" for="parking">Парковка</label>
                 <input class="visually-hidden" id="wi-fi" type="checkbox" name="facilities-wi-fi" value="wi-fi">
                 <label class="facilities-label" for="wi-fi">Wi-Fi</label>
-
               </fieldset>
               <fieldset class="filter-item housing-type">
                 <legend class="filter-legend">Тип жилья:</legend>
-
-
                 <input class="visually-hidden" id="hotel" type="radio" name="housing-type" value="hotel" checked>
                 <label class="housing-type-label" for="hotel">Гостиница</label>
-
                 <input class="visually-hidden" id="motel" type="radio" name="housing-type" value="motel">
                 <label class="housing-type-label" for="motel"> Мотель</label>
-
                 <input class="visually-hidden" id="apartments" type="radio" name="housing-type" value="apartments">
                 <label class="housing-type-label" for="apartments"> Апартаменты</label>
               </fieldset>
-
               <fieldset class="filter-item price">
                 <legend class="filter-legend">Стоимость, ₽:</legend>
-                <div class="price-fields">
-                  <label class="price-min">
-                    <input class="price-field" type="number" name="min-price" value="0">
+                <div class="price-container">
+                  <label class="price-block">
+                    <input class="price-field price-field-min" type="number" name="min-price" value="0">
                     <span class="price-text">от</span>
                   </label>
-                  <label class="price-max">
-                    <input class="price-field" type="number" name="max-price" value="9000">
+                  <label class="price-block">
+                    <input class="price-field price-field-max" type="number" name="max-price" value="9000">
                     <span class="price-text">до</span>
                   </label>
                 </div>
                 <div class="price-range">
                   <div class="price-scale">
-                    <div class="price-bar"></div>
+                    <div class="price-bar" style="width: 79%; margin-left:0%;"></div>
                   </div>
-                  <button class="price-range-toggle toggle-min" type="button">
+                  <button class="price-range-toggle toggle-min" style="left:0%;" type="button">
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
-                  <button class="price-range-toggle toggle-max" type="button">
+                  <button class="price-range-toggle toggle-max" style="left:79%;" type="button">
                     <span class="visually-hidden">Изменить максимальную цену</span>
                   </button>
                 </div>
