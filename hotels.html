@@ -81,36 +81,33 @@
             <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter-item facilities">
+
                 <legend class="filter-legend">Инфраструктура:</legend>
-                <label class="facilities-label">
-                  <input class="visually-hidden" type="checkbox" name="facilities-swimming-pool" value="swimming-pool"
-                    checked>
-                  Бассейн
-                </label>
-                <label class="facilities-label">
-                  <input class="visually-hidden" type="checkbox" name="facilities-parking" value="parking" checked>
-                  Парковка
-                </label>
-                <label class="facilities-label">
-                  <input class="visually-hidden" type="checkbox" name="facilities-wi-fi" value="wi-fi">
-                  Wi-Fi
-                </label>
+
+                <input class="visually-hidden" id="swimming-pool" type="checkbox" name="facilities-swimming-pool"
+                  value="swimming-pool" checked>
+                <label class="facilities-label" for="swimming-pool">Бассейн</label>
+                <input class="visually-hidden" id="parking" type="checkbox" name="facilities-parking" value="parking"
+                  checked>
+                <label class="facilities-label" for="parking">Парковка</label>
+                <input class="visually-hidden" id="wi-fi" type="checkbox" name="facilities-wi-fi" value="wi-fi">
+                <label class="facilities-label" for="wi-fi">Wi-Fi</label>
+
               </fieldset>
               <fieldset class="filter-item housing-type">
                 <legend class="filter-legend">Тип жилья:</legend>
-                <label class="housing-type-label">
-                  <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
-                  Гостиница
-                </label>
-                <label class="housing-type-label">
-                  <input class="visually-hidden" type="radio" name="housing-type" value="motel">
-                  Мотель
-                </label>
-                <label class="housing-type-label">
-                  <input class="visually-hidden" type="radio" name="housing-type" value="apartament">
-                  Апартаменты
-                </label>
+
+
+                <input class="visually-hidden" id="hotel" type="radio" name="housing-type" value="hotel" checked>
+                <label class="housing-type-label" for="hotel">Гостиница</label>
+
+                <input class="visually-hidden" id="motel" type="radio" name="housing-type" value="motel">
+                <label class="housing-type-label" for="motel"> Мотель</label>
+
+                <input class="visually-hidden" id="apartments" type="radio" name="housing-type" value="apartments">
+                <label class="housing-type-label" for="apartments"> Апартаменты</label>
               </fieldset>
+
               <fieldset class="filter-item price">
                 <legend class="filter-legend">Стоимость, ₽:</legend>
                 <div class="price-fields">

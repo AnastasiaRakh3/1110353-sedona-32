@@ -902,7 +902,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 200px;
-  margin-right: 16px;
+  margin-right: 17px;
 }
 
 .housing-type {
@@ -924,9 +924,76 @@ body {
 
 .facilities-label,
 .housing-type-label {
+  position: relative;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
   margin-bottom: 13px;
+  padding-left: 40px;
+}
+
+.facilities-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+input:checked + .facilities-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 10px;
+  background-image: url("../img/icons/check-mark.svg");
+  background-repeat: no-repeat;
+}
+
+.facilities-label:hover:before {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus + .facilities-label::before {
+  outline: 3px solid #83b3d3;
+}
+
+input:active + .facilities-label::before {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.housing-type-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+input:checked + .housing-type-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+input:focus + .housing-type-label::before {
+  outline: 3px solid #83b3d3;
+}
+
+input:active + .housing-type-label::before {
+  outline: none;
 }
 
 .price {
@@ -990,27 +1057,59 @@ body {
 }
 
 .form-button {
-  height: 48px;
-  padding: 0;
+  margin-bottom: 16px;
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
   border: none;
 }
 
 .form-button-submit {
+  height: 48px;
+  padding: 0;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 8px;
   background-color: #83b3d3;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button-submit:hover {
+  background-color: #68a2ca;
+}
+
+.form-button-submit:focus {
+  outline: 3px solid #ffffff;
+}
+
+.form-button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .form-button-reset {
+  align-self: center;
+  padding: 1px 10px 2px;
   font-size: 18px;
   line-height: 23px;
+  border: 3px solid transparent;
+  border-radius: 4px;
   background-color: transparent;
+}
+
+.form-button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-button-reset:focus {
+  color: rgba(255, 255, 255, 1);
+  border: 3px solid #83b3d3;
+  outline: none;
+}
+.form-button-reset:hover {
+  color: rgba(255, 255, 255, 0.3);
+  border: 3px solid transparent;
 }
 
 /* hotels */
