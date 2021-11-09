@@ -4,8 +4,8 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  /* src: url("../fonts/ptsans-400.woff2") format("woff2"); */
-  src: url("../fonts/ptsans-400.ttf") format("ttf");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  /* src: url("../fonts/ptsans-400.ttf") format("ttf"); */
   font-display: swap;
 }
 
@@ -611,18 +611,18 @@ body {
   outline: 3px solid #83b3d3;
 }
 
+.subscription-field:focus:invalid {
+  background-color: #ffffff;
+  outline: 2px solid #ff5757;
+  outline-offset: -2px;
+}
+
 .subscription-field:active,
 .subscription-field:not(:placeholder-shown) {
   background-color: #ffffff;
   outline: 2px solid #000000;
   outline-offset: -2px;
 }
-
-/* .subscription-field:invalid {
-  background-color: #ffffff;
-  outline: 2px solid #ff5757;
-  outline-offset: -2px;
-} */
 
 .subscription-field::placeholder {
   color: rgba(0, 0, 0, 0.6);
@@ -1028,6 +1028,13 @@ input:active + .housing-type-label::before {
   background-color: transparent;
   border: 2px solid #ffffff;
   box-sizing: border-box;
+  appearance: textfield;
+}
+
+.price-field::-webkit-inner-spin-button,
+.price-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .price-field-min {
@@ -1097,19 +1104,6 @@ input:active + .housing-type-label::before {
 
 .price-field:focus + .price-text {
   z-index: 1;
-}
-
-.price-field-min::-webkit-inner-spin-button,
-.price-field-min::-webkit-outer-spin-button,
-.price-field-max::-webkit-inner-spin-button,
-.price-field-max::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.price-field-min,
-.price-field-max {
-  -moz-appearance: textfield;
 }
 
 .price-range {
@@ -1633,7 +1627,6 @@ input:focus + .view-label {
   outline-offset: 0;
 }
 
-
 .pagination-link:active {
   color: rgba(225, 225, 225, 0.3);
   outline: none;
@@ -1715,4 +1708,307 @@ input:focus + .view-label {
 
 .body-hotels .subscription-description {
   color: #333333;
+}
+
+/* modal */
+
+.modal-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-search {
+  width: 575px;
+  padding: 62px 70px 70px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  outline: none;
+}
+
+.modal-close-button:active .modal-close-icon {
+  opacity: 0.3;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-title {
+  margin: 0 0 59px;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.search-group-date {
+  position: relative;
+}
+
+.search-group-date::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icons/calendar.svg");
+  background-repeat: no-repeat;
+}
+
+.form-search-label,
+.modal-field,
+.quantity-display {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.form-search-label {
+  width: 110px;
+  padding-right: 45px;
+}
+
+.kids-label {
+  position: relative;
+  width: 52px;
+  margin: 0;
+}
+
+.modal-field:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-field:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-field:active,
+.modal-field:not(:placeholder-shown) {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+}
+
+.modal-field::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Класс с ошибкой в инпуте модалки */
+.modal-field-error:focus {
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.info {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../img/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #83b3d3;
+  cursor: pointer;
+}
+
+.info-block {
+  position: absolute;
+  top: 37px;
+  left: -125px;
+  display: none;
+  width: 256px;
+  margin: 0;
+  padding: 15px 18px 18px 22px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: start;
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.info-block::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #333333;
+  transform: translate(50%, 0);
+  transform: rotate(45deg);
+}
+
+.info:hover .info-block {
+  display: block;
+}
+
+.modal-field {
+  flex-grow: 1;
+  padding: 0 40px 0 19px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-group-wrap {
+  display: flex;
+}
+
+.search-group-adults {
+  width: 288px;
+  margin-right: 56px;
+}
+
+.search-group-kids {
+  width: 230px;
+}
+
+.quantity-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 107px;
+  padding: 0 13px;
+  margin: 0;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+/* Почему у них ширина меньше? */
+.quantity-button {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-button::before,
+.quantity-button-more::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.quantity-button-more::after {
+  transform: rotate(90deg);
+  margin-left: -6.5px;
+}
+
+/* не срабатывают состояния */
+.quantity-button:hover .quantity-button::before,
+.quantity-button:hover .quantity-button-more::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.quantity-button:focus {
+  border: 3px solid #83b3d3;
+}
+
+.quantity-button:focus .quantity-button::before,
+.quantity-button:focus .quantity-button-more::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.quantity-button:active .quantity-button::before,
+.quantity-button:active .quantity-button-more::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background-color: #83b3d3;
+}
+
+.modal-submit:hover {
+  background-color: #68a2ca;
+}
+
+.modal-submit:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.modal-submit:active {
+  color: rgba(225, 225, 225, 0.3);
+  outline: none;
 }
