@@ -156,6 +156,10 @@ body {
   margin-left: 1px;
 }
 
+.navigation-user-item-favorites {
+  position: relative;
+}
+
 .navigation-user-link {
   text-decoration: none;
 }
@@ -1995,7 +1999,6 @@ input:focus + .view-label {
   text-transform: uppercase;
   color: #ffffff;
   border: none;
-  border-radius: 10px;
   background-color: #83b3d3;
 }
 
@@ -2011,4 +2014,114 @@ input:focus + .view-label {
 .modal-submit:active {
   color: rgba(225, 225, 225, 0.3);
   outline: none;
+}
+
+/* Popover */
+
+.popover {
+  position: absolute;
+  z-index: 100;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+/* Почему не отображается стрелка? */
+/* как спозиционировать псевдоэлемент и сам поповер? */
+/* сам li (кнопка с сердечком) 32px */
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 20px;
+  height: 9px;
+  margin-left: -13px;
+  background-image: url("../img/icons/popover-arrow.svg");
+  background-repeat: no-repeat;
+  border-bottom: 2px solid red;
+}
+
+.popover-favorites {
+  top: 48px;
+  left: -178px;
+  width: 400px;
+}
+
+.favorites-items {
+  padding: 15px 15px 13px;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px 20px 0 0;
+}
+
+.favorites-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorites-item:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.favorites-link {
+  display: flex;
+  padding: 6px 7px 7px;
+  color: #000000;
+  border: solid 3px red;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.favorites-img {
+  display: block;
+  margin-right: 17px;
+}
+
+.favorites-text {
+  padding-top: 4px;
+  padding-bottom: 3px;
+}
+
+.favorites-name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.favorites-type {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* Почему в инструментах разработчика не та ширина? */
+/* ширина и высота должны быть по 36, а там меньше, почему? */
+.favorites-delete {
+  width: 30px;
+  height: 30px;
+  margin-top: 6px;
+  padding: 0;
+  background-image: url("../img/icons/trash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid 3px red;
+  border-radius: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.favorites-all-btn {
+  width: 100%;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #756257;
+  border: none;
+  border-radius: 0px 0px 20px 20px;
+  cursor: pointer;
 }

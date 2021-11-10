@@ -44,7 +44,7 @@
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-user-item navigation-user-item-favorites">
               <a class="navigation-user-link navigation-user-favorites" href="#!">
                 <svg class="navigation-icon" aria-hidden="true" focusable="false" width="18" height="17"
                   xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,42 @@
                 <span class="visually-hidden">Избранные гостиницы</span>
                 <span class="favorites-quantity">12</span>
               </a>
+              <div class="popover popover-favorites">
+                <h2 class="visually-hidden">Список избранных</h2>
+                <ul class="favorites-items list">
+
+                  <li class="favorites-item">
+                    <a class="favorites-link" href="#!">
+                      <img class="favorites-img" src="img/hotel-2-small.jpg" width="48" height="48" alt="Мотель Desert Quail Inn.">
+                      <div class="favorites-text">
+                        <h2 class="favorites-name">Desert Quail Inn</h2>
+                        <span class="favorites-type">Мотель</span>
+                      </div>
+                    </a>
+                    <button class="favorites-delete">
+                      <span class="visually-hidden">Убрать из избранных</span>
+                    </button>
+                  </li>
+
+                  <li class="favorites-item">
+                    <a class="favorites-link" href="#!">
+                      <img class="favorites-img" src="img/hotel-3-small.jpg" width="48" height="48" alt="Апартаменты Villas at Poco Diablo.">
+                      <div class="favorites-text">
+                        <h2 class="favorites-name">Villas at Poco Diablo</h2>
+                        <span class="favorites-type">Апартаменты</span>
+                      </div>
+                    </a>
+                    <button class="favorites-delete">
+                      <span class="visually-hidden">Убрать из избранных</span>
+                    </button>
+                  </li>
+                </ul>
+
+                <button class="favorites-all-btn">Все избранные</button>
+              </div>
             </li>
+
+
             <li class="navigation-user-item">
               <a class="navigation-user-link btn-header" href="#!">Хочу сюда!</a>
             </li>
