@@ -1858,7 +1858,7 @@ input:focus + .view-label {
   outline: none;
 }
 
-.info {
+.info-btn {
   position: absolute;
   top: 14px;
   right: 18px;
@@ -1874,14 +1874,16 @@ input:focus + .view-label {
   cursor: pointer;
 }
 
+/* Можно ли спозиционировать с процентами? */
+/* Можно ли спозиционировать без расчетов вручную? */
 .info-block {
   position: absolute;
-  top: 37px;
-  left: -125px;
+  top: 40px;
+  left: -115.5px;
   display: none;
   width: 256px;
   margin: 0;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 28px 22px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -1893,19 +1895,22 @@ input:focus + .view-label {
   box-sizing: border-box;
 }
 
+
+/* Как можно отодвинуть элемент без отрицательного отступа влево?  половина ширина элемента*/
+/* Есть другой способ? */
 .info-block::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -9px;
   left: 50%;
-  width: 18px;
-  height: 18px;
-  background-color: #333333;
-  transform: translate(50%, 0);
-  transform: rotate(45deg);
+  margin-left: -9.5px;
+  width: 19px;
+  height: 9px;
+  background-image: url("../img/icons/tooltip-arrow.svg");
+  background-repeat: no-repeat;
 }
 
-.info:hover .info-block {
+.info-btn:hover .info-block {
   display: block;
 }
 
@@ -1999,6 +2004,7 @@ input:focus + .view-label {
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+  border-radius: 10px;
   background-color: #83b3d3;
 }
 
@@ -2028,8 +2034,6 @@ input:focus + .view-label {
 }
 
 /* Почему не отображается стрелка? */
-/* как спозиционировать псевдоэлемент и сам поповер? */
-/* сам li (кнопка с сердечком) 32px */
 .popover::before {
   content: "";
   position: absolute;
@@ -2037,7 +2041,7 @@ input:focus + .view-label {
   left: 50%;
   width: 20px;
   height: 9px;
-  margin-left: -13px;
+  margin-left: -10px;
   background-image: url("../img/icons/popover-arrow.svg");
   background-repeat: no-repeat;
   border-bottom: 2px solid red;
@@ -2045,7 +2049,7 @@ input:focus + .view-label {
 
 .popover-favorites {
   top: 48px;
-  left: -178px;
+  left: -181px;
   width: 400px;
 }
 
@@ -2071,6 +2075,19 @@ input:focus + .view-label {
   border: solid 3px red;
   border-radius: 10px;
   text-decoration: none;
+}
+
+.favorites-link:hover {
+  opacity: 0.6;
+}
+
+.favorites-link:focus {
+  border: solid 3px #83b3d3;
+}
+
+.favorites-link:active {
+  border: solid 3px transparent;
+  opacity: 0.3;
 }
 
 .favorites-img {
@@ -2111,6 +2128,19 @@ input:focus + .view-label {
   cursor: pointer;
 }
 
+.favorites-delete:hover {
+  opacity: 1;
+}
+
+.favorites-delete:focus {
+  border: solid 3px #83b3d3;
+  opacity: 1;
+}
+.favorites-delete:active {
+  border: solid 3px transparent;
+  opacity: 0.1;
+}
+
 .favorites-all-btn {
   width: 100%;
   padding: 0;
@@ -2124,4 +2154,18 @@ input:focus + .view-label {
   border: none;
   border-radius: 0px 0px 20px 20px;
   cursor: pointer;
+}
+
+.favorites-all-btn:hover {
+  background-color: #615048;
+}
+
+.favorites-all-btn:focus {
+  background-color: #615048;
+  outline: 3px solid #83b3d3;
+}
+
+.favorites-all-btn:active {
+  color: rgba(225, 225, 225, 0.3);
+  outline: none;
 }

@@ -272,6 +272,7 @@
         </section>
       </footer>
     </div>
+
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
 
@@ -290,13 +291,13 @@
 
             <div class="search-group search-group-date">
               <label class="form-search-label checkin-label" for="checkin">Дата заезда:</label>
-              <input class="modal-field" type="text" name="" id="checkin" placeholder="Укажите дату" required>
+              <input class="modal-field" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" required>
             </div>
 
 
             <div class="search-group search-group-date">
               <label class="form-search-label checkout-label" for="checkout">Дата выезда:</label>
-              <input class="modal-field modal-field-error" type="text" name="" id="checkout" placeholder="Укажите дату" required>
+              <input class="modal-field modal-field-error" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" required>
             </div>
 
 
@@ -313,19 +314,22 @@
                     <span class="visually-hidden">Увеличить колличество</span>
                   </button>
                 </p>
-                <input class="visually-hidden" type="number" name="" id="adults-number">
+                <input class="visually-hidden" type="number" name="adults-number" id="adults-number">
               </div>
 
 
               <div class="search-group search-group-kids">
                 <p class="form-search-label kids-label">
                   <label for="kids-number">Дети:</label>
+
+
                   <button class="info" type="button">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                     <span class="info-block">
                       Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                     </span>
                   </button>
+
                 </p>
                 <p class="quantity-wrap">
                   <button class="quantity-button quantity-button-less" type="button">
@@ -336,7 +340,7 @@
                     <span class="visually-hidden">Увеличить колличество</span>
                   </button>
                 </p>
-                <input class="visually-hidden" type="number" name="" id="adults-number">
+                <input class="visually-hidden" type="number" name="kids-number" id="kids-number">
               </div>
             </div>
 
