@@ -2033,7 +2033,6 @@ input:focus + .view-label {
   border-radius: 20px;
 }
 
-/* Почему не отображается стрелка? */
 .popover::before {
   content: "";
   position: absolute;
@@ -2042,9 +2041,9 @@ input:focus + .view-label {
   width: 20px;
   height: 9px;
   margin-left: -10px;
-  background-image: url("../img/icons/popover-arrow.svg");
+  border-bottom: solid 1px #ffffff;
+  background-image: url("../img/icons/vector.svg");
   background-repeat: no-repeat;
-  border-bottom: 2px solid red;
 }
 
 .popover-favorites {
