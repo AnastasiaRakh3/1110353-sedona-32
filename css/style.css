@@ -2053,7 +2053,7 @@ input:focus + .view-label {
 }
 
 .favorites-items {
-  padding: 15px 15px 13px;
+  padding: 15px 15px 16px;
   border: 1px solid #e6e6e6;
   border-radius: 20px 20px 0 0;
 }
@@ -2064,14 +2064,14 @@ input:focus + .view-label {
 }
 
 .favorites-item:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .favorites-link {
   display: flex;
   padding: 6px 7px 7px;
   color: #000000;
-  border: solid 3px red;
+  border: solid 3px transparent;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -2082,6 +2082,7 @@ input:focus + .view-label {
 
 .favorites-link:focus {
   border: solid 3px #83b3d3;
+  outline: none;
 }
 
 .favorites-link:active {
@@ -2095,20 +2096,21 @@ input:focus + .view-label {
 }
 
 .favorites-text {
-  padding-top: 4px;
+  padding-top: 3px;
   padding-bottom: 3px;
 }
 
 .favorites-name {
   margin: 0;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 21px;
   font-weight: 700;
 }
 
 .favorites-type {
+  display: block;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 21px;
 }
 
 /* Почему в инструментах разработчика не та ширина? */
@@ -2119,9 +2121,10 @@ input:focus + .view-label {
   margin-top: 6px;
   padding: 0;
   background-image: url("../img/icons/trash.svg");
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  border: solid 3px red;
+  border: solid 3px transparent;
   border-radius: 10px;
   opacity: 0.2;
   cursor: pointer;
@@ -2134,6 +2137,7 @@ input:focus + .view-label {
 .favorites-delete:focus {
   border: solid 3px #83b3d3;
   opacity: 1;
+  outline: none;
 }
 .favorites-delete:active {
   border: solid 3px transparent;
