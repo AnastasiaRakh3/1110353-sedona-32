@@ -37,13 +37,13 @@
                       d="m18 16.5-3.7-3.7A8 8 0 0 0 8-.1C3.6-.1 0 3.6 0 8a8 8 0 0 0 12.9 6.3l3.7 3.7 1.4-1.5ZM8 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6Z" />
                   </g>
                   <defs>
-                      <path d="M0 0h18v18H0z" />
+                    <path d="M0 0h18v18H0z" />
                   </defs>
                 </svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-user-item navigation-user-item-favorites">
               <a class="navigation-user-link navigation-user-favorites" href="#!">
                 <svg class="navigation-icon" aria-hidden="true" focusable="false" width="18" height="17"
                   xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +53,38 @@
                 <span class="visually-hidden">Избранные гостиницы</span>
                 <span class="favorites-quantity">12</span>
               </a>
+              <div class="popover popover-favorites">
+                <h2 class="visually-hidden">Список избранных</h2>
+                <ul class="favorites-items list">
+                  <li class="favorites-item">
+                    <a class="favorites-link" href="#!">
+                      <img class="favorites-img" src="img/hotel-2-small.jpg" width="48" height="48"
+                        alt="Мотель Desert Quail Inn.">
+                      <div class="favorites-text">
+                        <h2 class="favorites-name">Desert Quail Inn</h2>
+                        <span class="favorites-type">Мотель</span>
+                      </div>
+                    </a>
+                    <button class="favorites-delete">
+                      <span class="visually-hidden">Убрать из избранных</span>
+                    </button>
+                  </li>
+                  <li class="favorites-item">
+                    <a class="favorites-link" href="#!">
+                      <img class="favorites-img" src="img/hotel-3-small.jpg" width="48" height="48"
+                        alt="Апартаменты Villas at Poco Diablo.">
+                      <div class="favorites-text">
+                        <h2 class="favorites-name">Villas at Poco Diablo</h2>
+                        <span class="favorites-type">Апартаменты</span>
+                      </div>
+                    </a>
+                    <button class="favorites-delete">
+                      <span class="visually-hidden">Убрать из избранных</span>
+                    </button>
+                  </li>
+                </ul>
+                <button class="favorites-all-btn">Все избранные</button>
+              </div>
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link btn-header" href="#!">Хочу сюда!</a>
@@ -144,7 +176,7 @@
                     d="m6.6 6.7 5.1-5.3a1 1 0 0 0 0-1.2 1 1 0 0 0-1.2 0L6 4.9 1.5.2A1 1 0 0 0 .3.2C.1.3 0 .6 0 .8l.3.6 5.1 5.3c.3.4.9.4 1.2 0Z" />
                 </g>
                 <defs>
-                    <path d="M0 0h12v7H0z" />
+                  <path d="M0 0h12v7H0z" />
                 </defs>
               </svg>
             </p>
@@ -309,7 +341,7 @@
                       d="m6.6 6.7 5.1-5.3a1 1 0 0 0 0-1.2 1 1 0 0 0-1.2 0L6 4.9 1.5.2A1 1 0 0 0 .3.2C.1.3 0 .6 0 .8l.3.6 5.1 5.3c.3.4.9.4 1.2 0Z" />
                   </g>
                   <defs>
-                      <path d="M0 0h12v7H0z" />
+                    <path d="M0 0h12v7H0z" />
                   </defs>
                 </svg>
               </p>
@@ -347,7 +379,7 @@
                       d="M11.6.2c1.8-.5 3.2.3 3.8 1.2l2.1-.7c0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6a3 3 0 0 1-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 5.6-.2 2.5.9.9a11 11 0 0 0 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z" />
                   </g>
                   <defs>
-                      <path d="M0 0h18v15H0z" />
+                    <path d="M0 0h18v15H0z" />
                   </defs>
                 </svg>
                 <span class="visually-hidden">Твиттер</span>
@@ -371,7 +403,7 @@
                       d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z" />
                   </g>
                   <defs>
-                      <path d="M0 0h20v16H0z" />
+                    <path d="M0 0h20v16H0z" />
                   </defs>
                 </svg>
                 <span class="visually-hidden">Ютьюб</span>
@@ -387,13 +419,80 @@
                   d="M8 6.2c.8-1 2-1.7 3.6-1.7 2.7 0 4.6 1.9 4.5 4.9v6.1h-2V9.8c0-1.8-1.1-3.2-2.9-3.2-2 0-3.3 1.5-3.3 3.6v5.3h-2V0h2v6.2H8Zm-8 9.3v-2.6h2.5v2.6H0ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm11 1.9a3.7 3.7 0 0 1 3.5-2.1c2.5 0 4 1.8 3.9 4.3v6.5h-2V9.1c0-1.6-.9-2.6-2.4-2.6-1.2 0-2.6.9-2.6 3.3v5.6h-2V9.1c0-1.6-.9-2.6-2.4-2.6C32 6.5 31 8 31 10v5.4h-2V4.8h1.9v1.6h.1c.6-1 1.7-1.8 3.1-1.8 1.6 0 2.8.9 3.4 2.1h.1Zm10.2 6c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM25 17.9c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6h-.1c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6s3.6-1.7 3.6-3.6c0-2-1.4-3.6-3.6-3.6a3.5 3.5 0 0 0-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1V22Zm7-4.1c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6H55c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6 2.1 0 3.6-1.7 3.6-3.6 0-2-1.4-3.6-3.6-3.6a3.5 3.5 0 0 0-3.6 3.6Zm20.8-3.7a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm7.7-3.6c0-3.1 2.2-5.6 5.5-5.6 3.5 0 5.7 2.7 5.5 6.3H75c.1 1.6 1.5 2.9 3.4 2.9 1.4 0 2.5-.6 3-1.6h2.1c-.7 2.3-2.7 3.6-5.2 3.6-3.4 0-5.5-2.6-5.5-5.6Zm8.8-1.1c-.3-1.6-1.6-2.6-3.3-2.6a3.2 3.2 0 0 0-3.2 2.6h6.5Zm16.6-4.5a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm7.6.2 3.6 8.9 3.4-8.9h2.1l-4.7 12.2c-.7 1.8-1.7 2.6-3.5 2.6h-2.5v-2h2.5c1 0 1.4-.3 1.7-1.2l-4.8-11.6h2.2Z" />
               </g>
               <defs>
-                  <path d="M0 0h114.9v32.9H0z" />
+                <path d="M0 0h114.9v32.9H0z" />
               </defs>
             </svg>
           </a>
         </section>
       </footer>
     </div>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <svg class="modal-close-icon" aria-hidden="true" focusable="false" width="13" height="13"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" />
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="search-group search-group-date">
+              <label class="form-search-label checkin-label" for="checkin">Дата заезда:</label>
+              <input class="modal-field" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату"
+                required>
+            </div>
+            <div class="search-group search-group-date">
+              <label class="form-search-label checkout-label" for="checkout">Дата выезда:</label>
+              <input class="modal-field modal-field-error" type="text" name="checkout-date" id="checkout"
+                placeholder="Укажите дату" required>
+            </div>
+            <div class="search-group-wrap">
+              <div class="search-group search-group-adults">
+                <label class="form-search-label adults-label" for="adults-number">Взрослые:</label>
+                <p class="quantity-wrap">
+                  <button class="quantity-button quantity-button-less" type="button">
+                    <span class="visually-hidden">Уменьшить колличество</span>
+                  </button>
+                  <span class="quantity-display">2</span>
+                  <button class="quantity-button quantity-button-more" type="button">
+                    <span class="visually-hidden">Увеличить колличество</span>
+                  </button>
+                </p>
+                <input class="visually-hidden" type="number" name="adults-number" id="adults-number">
+              </div>
+              <div class="search-group search-group-kids">
+                <p class="form-search-label kids-label">
+                  <label for="kids-number">Дети:</label>
+                  <button class="info-btn" type="button">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    <span class="info-block">
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                      размещаются бесплатно.
+                    </span>
+                  </button>
+                </p>
+                <p class="quantity-wrap">
+                  <button class="quantity-button quantity-button-less" type="button">
+                    <span class="visually-hidden">Уменьшить колличество</span>
+                  </button>
+                  <span class="quantity-display">1</span>
+                  <button class="quantity-button quantity-button-more" type="button">
+                    <span class="visually-hidden">Увеличить колличество</span>
+                  </button>
+                </p>
+                <input class="visually-hidden" type="number" name="kids-number" id="kids-number">
+              </div>
+            </div>
+            <button class="modal-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 
 </html>

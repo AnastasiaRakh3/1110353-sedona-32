@@ -238,6 +238,166 @@ body {
   color: rgba(225, 225, 225, 0.3);
 }
 
+/* Popover */
+
+.popover {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+/* .popover-open {
+  display: block;
+} */
+
+.navigation-user-item-favorites:focus-within .popover {
+  display: block;
+}
+
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 20px;
+  height: 9px;
+  margin-left: -10px;
+  border-bottom: solid 1px #ffffff;
+  background-image: url("../img/icons/vector.svg");
+  background-repeat: no-repeat;
+}
+
+.popover-favorites {
+  top: 48px;
+  left: -181px;
+}
+
+.favorites-items {
+  padding: 15px 15px 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px 20px 0 0;
+}
+
+.favorites-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorites-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.favorites-link {
+  display: flex;
+  padding: 6px 7px 7px;
+  color: #000000;
+  border: solid 3px transparent;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.favorites-link:hover {
+  opacity: 0.6;
+}
+
+.favorites-link:focus {
+  border: solid 3px #83b3d3;
+  outline: none;
+}
+
+.favorites-link:active {
+  border: solid 3px transparent;
+  opacity: 0.3;
+}
+
+.favorites-img {
+  display: block;
+  margin-right: 17px;
+}
+
+.favorites-text {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.favorites-name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.favorites-type {
+  display: block;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.favorites-delete {
+  width: 36px;
+  height: 36px;
+  margin-top: 6px;
+  padding: 0;
+  background-image: url("../img/icons/trash.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid 3px transparent;
+  border-radius: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.favorites-delete:hover {
+  opacity: 1;
+}
+
+.favorites-delete:focus {
+  border: solid 3px #83b3d3;
+  opacity: 1;
+  outline: none;
+}
+.favorites-delete:active {
+  border: solid 3px transparent;
+  opacity: 0.1;
+}
+
+.favorites-all-btn {
+  width: 100%;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #756257;
+  border: none;
+  border-radius: 0px 0px 20px 20px;
+  cursor: pointer;
+}
+
+.favorites-all-btn:hover {
+  background-color: #615048;
+}
+
+.favorites-all-btn:focus {
+  background-color: #615048;
+  outline: 3px solid #83b3d3;
+}
+
+.favorites-all-btn:active {
+  color: rgba(225, 225, 225, 0.3);
+  outline: none;
+}
+
+/* btn-header */
+
 .btn-header {
   display: block;
   min-width: 160px;
@@ -1895,7 +2055,6 @@ input:focus + .view-label {
   box-sizing: border-box;
 }
 
-
 /* Как можно отодвинуть элемент без отрицательного отступа влево?  половина ширина элемента*/
 /* Есть другой способ? */
 .info-block::before {
@@ -1946,11 +2105,10 @@ input:focus + .view-label {
   border-radius: 4px;
 }
 
-/* Почему у них ширина меньше? */
 .quantity-button {
   position: relative;
-  width: 19px;
-  height: 19px;
+  width: 25px;
+  height: 25px;
   padding: 0;
   border: 3px solid transparent;
   border-radius: 4px;
@@ -1974,9 +2132,8 @@ input:focus + .view-label {
   margin-left: -6.5px;
 }
 
-/* не срабатывают состояния */
-.quantity-button:hover .quantity-button::before,
-.quantity-button:hover .quantity-button-more::after {
+.quantity-button:hover.quantity-button::before,
+.quantity-button:hover.quantity-button-more::after {
   background-color: rgba(0, 0, 0, 1);
 }
 
@@ -1984,13 +2141,13 @@ input:focus + .view-label {
   border: 3px solid #83b3d3;
 }
 
-.quantity-button:focus .quantity-button::before,
-.quantity-button:focus .quantity-button-more::after {
+.quantity-button:focus.quantity-button::before,
+.quantity-button:focus.quantity-button-more::after {
   background-color: rgba(0, 0, 0, 1);
 }
 
-.quantity-button:active .quantity-button::before,
-.quantity-button:active .quantity-button-more::after {
+.quantity-button:active.quantity-button::before,
+.quantity-button:active.quantity-button-more::after {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -2018,157 +2175,6 @@ input:focus + .view-label {
 }
 
 .modal-submit:active {
-  color: rgba(225, 225, 225, 0.3);
-  outline: none;
-}
-
-/* Popover */
-
-.popover {
-  position: absolute;
-  z-index: 100;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-}
-
-.popover::before {
-  content: "";
-  position: absolute;
-  top: -9px;
-  left: 50%;
-  width: 20px;
-  height: 9px;
-  margin-left: -10px;
-  border-bottom: solid 1px #ffffff;
-  background-image: url("../img/icons/vector.svg");
-  background-repeat: no-repeat;
-}
-
-.popover-favorites {
-  top: 48px;
-  left: -181px;
-  width: 400px;
-}
-
-.favorites-items {
-  padding: 15px 15px 16px;
-  border: 1px solid #e6e6e6;
-  border-radius: 20px 20px 0 0;
-}
-
-.favorites-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.favorites-item:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.favorites-link {
-  display: flex;
-  padding: 6px 7px 7px;
-  color: #000000;
-  border: solid 3px transparent;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.favorites-link:hover {
-  opacity: 0.6;
-}
-
-.favorites-link:focus {
-  border: solid 3px #83b3d3;
-  outline: none;
-}
-
-.favorites-link:active {
-  border: solid 3px transparent;
-  opacity: 0.3;
-}
-
-.favorites-img {
-  display: block;
-  margin-right: 17px;
-}
-
-.favorites-text {
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.favorites-name {
-  margin: 0;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 700;
-}
-
-.favorites-type {
-  display: block;
-  font-size: 16px;
-  line-height: 21px;
-}
-
-/* Почему в инструментах разработчика не та ширина? */
-/* ширина и высота должны быть по 36, а там меньше, почему? */
-.favorites-delete {
-  width: 30px;
-  height: 30px;
-  margin-top: 6px;
-  padding: 0;
-  background-image: url("../img/icons/trash.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: solid 3px transparent;
-  border-radius: 10px;
-  opacity: 0.2;
-  cursor: pointer;
-}
-
-.favorites-delete:hover {
-  opacity: 1;
-}
-
-.favorites-delete:focus {
-  border: solid 3px #83b3d3;
-  opacity: 1;
-  outline: none;
-}
-.favorites-delete:active {
-  border: solid 3px transparent;
-  opacity: 0.1;
-}
-
-.favorites-all-btn {
-  width: 100%;
-  padding: 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 60px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  background-color: #756257;
-  border: none;
-  border-radius: 0px 0px 20px 20px;
-  cursor: pointer;
-}
-
-.favorites-all-btn:hover {
-  background-color: #615048;
-}
-
-.favorites-all-btn:focus {
-  background-color: #615048;
-  outline: 3px solid #83b3d3;
-}
-
-.favorites-all-btn:active {
   color: rgba(225, 225, 225, 0.3);
   outline: none;
 }
