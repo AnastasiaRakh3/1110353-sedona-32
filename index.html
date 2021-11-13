@@ -275,12 +275,16 @@
             <div class="search-group search-group-date">
               <label class="form-search-label checkin-label" for="checkin">Дата заезда:</label>
               <input class="modal-field" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату"
-                required>
+                value="27 апреля 2020" required>
+              <p class="date-tip date-success">На эти даты есть свободные номера. Пока есть.</p>
+              <p class="date-tip date-error date-tip-show">Мы не можем отправить вас в прошлое.</p>
             </div>
             <div class="search-group search-group-date">
               <label class="form-search-label checkout-label" for="checkout">Дата выезда:</label>
               <input class="modal-field modal-field-error" type="text" name="checkout-date" id="checkout"
-                placeholder="Укажите дату" required>
+                placeholder="Укажите дату" value="1 сентября 2021" required>
+              <p class="date-tip date-success date-tip-show">На эти даты есть свободные номера. Пока есть.</p>
+              <p class="date-tip date-error">Мы не можем отправить вас в прошлое.</p>
             </div>
             <div class="search-group-wrap">
               <div class="search-group search-group-adults">
@@ -289,12 +293,14 @@
                   <button class="quantity-button quantity-button-less" type="button">
                     <span class="visually-hidden">Уменьшить колличество</span>
                   </button>
-                  <span class="quantity-display">2</span>
+                  <label>
+                    <input class="quantity-input" type="number" name="adults-number" value="2">
+                    <span class="visually-hidden">Количество взрослых</span>
+                  </label>
                   <button class="quantity-button quantity-button-more" type="button">
                     <span class="visually-hidden">Увеличить колличество</span>
                   </button>
                 </p>
-                <input class="visually-hidden" type="number" name="adults-number" id="adults-number">
               </div>
               <div class="search-group search-group-kids">
                 <p class="form-search-label kids-label">
@@ -311,12 +317,14 @@
                   <button class="quantity-button quantity-button-less" type="button">
                     <span class="visually-hidden">Уменьшить колличество</span>
                   </button>
-                  <span class="quantity-display">1</span>
+                  <label>
+                    <input class="quantity-input" type="number" name="kids-number" value="1">
+                    <span class="visually-hidden">Количество детей</span>
+                  </label>
                   <button class="quantity-button quantity-button-more" type="button">
                     <span class="visually-hidden">Увеличить колличество</span>
                   </button>
                 </p>
-                <input class="visually-hidden" type="number" name="kids-number" id="kids-number">
               </div>
             </div>
             <button class="modal-submit" type="submit">Найти</button>
