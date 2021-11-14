@@ -363,6 +363,7 @@ img {
   opacity: 1;
   outline: none;
 }
+
 .favorites-delete:active {
   border: solid 3px transparent;
   opacity: 0.1;
@@ -1098,17 +1099,13 @@ img {
   display: block;
 }
 
-.modal-field {
-  height: 50px;
-}
-
 .modal-field:hover {
   background-color: #e6e6e6;
 }
 
 .modal-field:focus {
   background-color: #e6e6e6;
-  outline: 3px solid 183b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-field:active {
@@ -1179,6 +1176,7 @@ img {
 
 .modal-field {
   flex-grow: 1;
+  height: 50px;
   padding: 0 40px 0 19px;
   background-color: #f2f2f2;
   border: none;
@@ -1244,7 +1242,7 @@ img {
 }
 
 .quantity-button:focus {
-  border: 3px solid 83b3d3;
+  border: 3px solid #83b3d3;
   outline: none;
 }
 
@@ -1410,8 +1408,10 @@ img {
 }
 
 .filter-legend {
+  padding: 0;
   font-size: 20px;
   line-height: 26px;
+  font-weight: 700;
 }
 
 /* facilities, housing-type */
@@ -1428,11 +1428,6 @@ img {
   flex-direction: column;
   width: 250px;
   margin-right: 62px;
-}
-
-.filter-legend {
-  padding: 0;
-  font-weight: 700;
 }
 
 .facilities .filter-legend,
@@ -1471,7 +1466,7 @@ input:checked + .facilities-label::after {
   content: "";
 }
 
-.facilities-label:hover:before {
+.facilities-label:hover::before {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1724,6 +1719,7 @@ input:active + .housing-type-label::before {
   border: 3px solid #83b3d3;
   outline: none;
 }
+
 .form-button-reset:active {
   color: rgba(255, 255, 255, 0.3);
   border: 3px solid transparent;
@@ -1853,7 +1849,6 @@ input:focus + .view-label {
 
 .view-label-row {
   background-image: url("../img/icons/view-row.svg");
-
 }
 
 /* hotels-list */
